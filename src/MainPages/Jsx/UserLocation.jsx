@@ -25,7 +25,7 @@ const UserLocation=()=>{
         <>
         <section>
            
-            <h3>Your Current  Cooridinates is [79.333333,30.416667]</h3>
+            <h3>Your Current  Cooridinates is [{long}&nbsp;,&nbsp;{lat}]</h3>
            
         </section>
         <section>
