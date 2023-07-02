@@ -2,6 +2,8 @@ import React, {useEffect, useState } from "react";
 import Map from "./Map";
 import StaffInfo from "./StaffInfo";
 import Navbar from "./Navbar";
+import '../Styles/UserLocation.css'
+import SignUpAlert from "./SignUpAlert";
 
 const UserLocation=()=>{
     
@@ -26,14 +28,14 @@ const UserLocation=()=>{
  
     return(
       
-        <>
+        <div className="main-section">
         
         <section>
           <Navbar />
         </section>
         <section>
            
-            <h3>Your Current  Cooridinates is [{long}&nbsp;,&nbsp;{lat}]</h3>
+            <SignUpAlert />
            
         </section>
         <section>
@@ -42,10 +44,10 @@ const UserLocation=()=>{
             <Map long={long} lat={lat}/>
             }
         </section>
-        <section>
+        <section className="staff-container">
           <StaffInfo />
         </section>
-            </>
+            </div>
     )
   }
 }

@@ -1,0 +1,23 @@
+ .heading{
+    font-weight: 700;
+    font-size: 30px;
+} 
+.navbar{
+    padding: 0px 15px;
+}
+.container-fluid{
+    padding: 0px 0px;
+}
+.btn-icon{
+    border: none !important;
+    outline: none !important;
+
+}
+.btn-icon:hover{
+      border: none !important;
+    outline: none !important;
+}
+#sidemenu-icon{
+    font-size: 30px;
+  
+}

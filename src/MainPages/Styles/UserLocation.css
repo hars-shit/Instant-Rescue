@@ -1,0 +1,10 @@
+.main-section{
+    display: flex;
+    padding: 100px 0px;
+    height: 87vh;
+    flex-direction: column;
+}
+.staff-container{
+    display: flex;
+    justify-content: center;
+}

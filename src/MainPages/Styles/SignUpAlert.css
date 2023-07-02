@@ -1,0 +1,10 @@
+#signUp{
+    font-size: 20px;
+    color: #917676;
+}
+a{
+    text-decoration: none;
+    display: flex;
+    gap: 20px;
+    color: #917676;
+}
