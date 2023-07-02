@@ -17,7 +17,7 @@ const Map = ({long,lat}) => {
       container: mapContainerRef.current,
       center:[long,lat],
       // center: [79.331769,	30.404105], // Initial center coordinates
-      zoom: 8, // Initial zoom level
+      zoom: 9, // Initial zoom level
     });
 
   setMap(showmap)
