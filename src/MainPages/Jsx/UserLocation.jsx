@@ -21,9 +21,13 @@ const UserLocation=()=>{
         })
 },[])
 
+  if(long && lat ){
 
+ 
     return(
+      
         <>
+        
         <section>
           <Navbar />
         </section>
@@ -43,5 +47,6 @@ const UserLocation=()=>{
         </section>
             </>
     )
+  }
 }
 export default UserLocation;

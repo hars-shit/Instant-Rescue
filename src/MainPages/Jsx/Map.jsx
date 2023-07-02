@@ -12,11 +12,12 @@ const Map = ({long,lat}) => {
 
   useEffect(() => {
     let showmap = tt.map({
+
       key: 'nxP60dDKYy8aUSSv0n9zbMBxrCnshiJO', // Replace with your TomTom API key
       container: mapContainerRef.current,
       center:[long,lat],
       // center: [79.331769,	30.404105], // Initial center coordinates
-      zoom: 11, // Initial zoom level
+      zoom: 10, // Initial zoom level
     });
 
   setMap(showmap)

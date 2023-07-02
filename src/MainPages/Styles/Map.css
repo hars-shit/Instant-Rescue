@@ -5,6 +5,6 @@
 }
 @media screen and(max-width:400px) {
     .map-container{
-        height: 60px;
+        height: 40px;
     }
 }
