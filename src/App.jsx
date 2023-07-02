@@ -1,11 +1,12 @@
-import React, { useState } from "react"
-import Home from "./MainPages/Jsx/Home"
+import React from "react"
+import UserLocation from "./MainPages/Jsx/UserLocation"
+
 
 
 
 function App() {
   
-    return <Home />
+    return <UserLocation />
   
 
 }

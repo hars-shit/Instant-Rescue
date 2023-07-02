@@ -1,6 +1,7 @@
-
 import React, {useEffect, useState } from "react";
 import Map from "./Map";
+import StaffInfo from "./StaffInfo";
+import Navbar from "./Navbar";
 
 const UserLocation=()=>{
     
@@ -24,6 +25,9 @@ const UserLocation=()=>{
     return(
         <>
         <section>
+          <Navbar />
+        </section>
+        <section>
            
             <h3>Your Current  Cooridinates is [{long}&nbsp;,&nbsp;{lat}]</h3>
            
@@ -33,6 +37,9 @@ const UserLocation=()=>{
                 long && lat &&
             <Map long={long} lat={lat}/>
             }
+        </section>
+        <section>
+          <StaffInfo />
         </section>
             </>
     )

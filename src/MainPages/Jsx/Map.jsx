@@ -3,10 +3,12 @@ import React, { useEffect, useRef, useState } from 'react';
 import tt from '@tomtom-international/web-sdk-maps';
 import '../Styles/Map.css'
 // import '@tomtom-international/web-sdk-maps/dist/maps.css'
+// import '@tomtom-international/web-sdk-maps/dist/maps.css';
+
 
 const Map = ({long,lat}) => {
     const mapContainerRef = useRef();
-    const [map,setMap]=useState();
+    const [map,setMap]=useState({});
 
   useEffect(() => {
     let showmap = tt.map({
@@ -17,8 +19,8 @@ const Map = ({long,lat}) => {
       zoom: 14, // Initial zoom level
     });
 
-
-  return()=> setMap(showmap)
+  setMap(showmap)
+  // return()=> map.destroy();
   
   },[]);
 
