@@ -1,5 +1,10 @@
 .map-container{
     background-repeat: no-repeat;
     /* width: 100vh; */
-    height: 800px;
+    height: 400px;
+}
+@media screen and(max-width:400px) {
+    .map-container{
+        height: 100px;
+    }
 }
