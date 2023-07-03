@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import '../Styles/Navbar.css'
 import {BiMenuAltRight} from 'react-icons/bi'
-import webLogo from '/home/harshit/Desktop/React/Insta rescue/src/assets/weblogo.png'
+
 
 const Navbar=()=>{
     return <nav className="navbar navbar-dark bg-secondary fixed-top">
