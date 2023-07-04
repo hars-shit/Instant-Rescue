@@ -37,7 +37,7 @@ const StreetLoc=()=>{
         userLocation()
 
 
-    },[])
+    },[locations.location1,locations.location2])
     return ( 
         
         <>
