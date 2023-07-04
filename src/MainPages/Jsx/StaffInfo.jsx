@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import {MdAddCall} from 'react-icons/md'
 import '../Styles/Staff.css'
 import { data } from "../../FakeData/data";
+import {FcSearch} from 'react-icons/fc'
 // import {data}  from "../../FakeData/data";
 const StaffInfo=()=>{
    
@@ -17,7 +18,7 @@ const StaffInfo=()=>{
     },[])
     return (<section className="staff-container">
         {/* for  the data of the mdecical staff  */}
-        <div><p className="medical-heading">Available Medical workforce</p></div>
+        <div><p className="medical-heading"><FcSearch />Healthcare Workers</p></div>
         { !isVisible && 
             <div className="loader"></div>
         }

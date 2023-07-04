@@ -56,7 +56,7 @@ const UserLocation=()=>{
         <section className="staff-container">
           <StaffInfo />
         </section>
-        <div class="b-example-divider"></div>
+        <div className="b-example-divider"></div>
           <Footer />
             </div>
     )

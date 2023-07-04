@@ -1,26 +1,29 @@
 .staff-container{
     display: flex;
     flex-direction: column;
-    margin-top: 25px;
+    margin-top:8px;
     /* border: 2px solid; */
     padding: 10px 10px;
     width: 22rem;
-    gap: 25px;
+    gap: 17px;
     justify-content: center;
     align-items: center;
 
 }
 .medical-heading {
-    font-size: 20px;
+    font-size: 23px;
     font-weight: 800;
     color: rgb(98, 47, 103);
 }
+.medical-heading svg{
+    font-size: 25px;
+}
 .info-staff{
     display: flex;
-  padding: 10px 10px;
+    padding: 10px 10px;
     gap: 27px;
     align-items: baseline;
-    border: 2px solid rgb(153, 158, 158);
+    border: 3px solid rgb(249 249 249);
     border-radius: 10px;
 }
 .info-staff img{

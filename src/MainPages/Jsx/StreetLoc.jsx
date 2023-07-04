@@ -1,8 +1,9 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
-
-
+import { useSelector }  from "react-redux";
+import {FaAddressBook} from 'react-icons/fa'
+import {FaStreetView} from 'react-icons/fa'
+import '../Styles/StreetLoc.css'
 // const UserDetails=()=>{
 //     const dispatch=useDispatch();
 // }
@@ -44,8 +45,8 @@ const StreetLoc=()=>{
      {   
             address1 && address2  &&
             <div className="user-location">
-            <p>street:{address1}</p>
-        <p>adress line:{address2}</p>
+        <p className="addressBook"><FaAddressBook />{address2}</p>
+            <p className="streetBook"><FaStreetView id="street"/>{address1}</p>
         {/* <button onClick={()=>handleclick(address1)}></button> */}
         </div>
         
