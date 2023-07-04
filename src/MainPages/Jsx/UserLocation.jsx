@@ -6,7 +6,15 @@ import '../Styles/UserLocation.css'
 import SignUpAlert from "./SignUpAlert";
 import StreetLoc from "./StreetLoc";
 
+// import { showLocation } from "../../Store/slices/UserSlice";
+// import {setLocation1, setLocation2} from "../../Store/slices/UserSlice"
+import { useDispatch } from "react-redux";
+import { setLocation1, setLocation2 } from "../../Store/slices/UserSlice";
+import Footer from "./Footer";
+
+
 const UserLocation=()=>{
+  const dispatch = useDispatch();
     
     // for Longitude=>
   const [long,setLong]=useState();
@@ -19,18 +27,18 @@ const UserLocation=()=>{
         navigator.geolocation.getCurrentPosition((position)=>{
             console.log(position.coords)
             setLong(position.coords.longitude);
-           
             setLat(position.coords.latitude);
+            dispatch(setLocation1(position.coords.longitude))
+            dispatch(setLocation2(position.coords.latitude))
         })
 },[])
-
- 
 
  
     return(
       
         <div className="main-section">
-        <StreetLoc long={long} lat={lat}/>
+             <StreetLoc/>
+        {/* <StreetLoc long={long} lat={lat}/> */}
         <section>
           <Navbar />
         </section>
@@ -48,6 +56,8 @@ const UserLocation=()=>{
         <section className="staff-container">
           <StaffInfo />
         </section>
+        <div class="b-example-divider"></div>
+          <Footer />
             </div>
     )
   

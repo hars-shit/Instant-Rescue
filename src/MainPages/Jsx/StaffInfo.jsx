@@ -10,7 +10,7 @@ const StaffInfo=()=>{
        const interval = setInterval(()=>{
         setIsVisible(true);
         clearInterval(interval);
-        },7000)
+        },3000)
     return ()=>{
         clearInterval(interval);
     }
@@ -19,7 +19,7 @@ const StaffInfo=()=>{
         {/* for  the data of the mdecical staff  */}
         <div><p className="medical-heading">Available Medical workforce</p></div>
         { !isVisible && 
-            <div class="loader"></div>
+            <div className="loader"></div>
         }
         {
             isVisible &&
@@ -37,12 +37,12 @@ const StaffInfo=()=>{
             
             <div className="info-name">
 
-                <h5>{e.name}r</h5>
+                <h5 id="name">{e.name}</h5>
             <p id="occupation">{e.occupation}</p>
             </div>
             <div className="info-call">
 
-            <a href={`tel:${e.phone_no}`} ><MdAddCall id="call-icon" /></a>
+            <a to={`tel:${e.phone_no}`} ><MdAddCall id="call-icon" /></a>
             </div>
             
 
