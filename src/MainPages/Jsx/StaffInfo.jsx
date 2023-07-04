@@ -42,7 +42,7 @@ const StaffInfo=()=>{
             </div>
             <div className="info-call">
 
-            <a to={`tel:${e.phone_no}`} ><MdAddCall id="call-icon" /></a>
+            <a href={`tel:${e.phone_no}`} ><MdAddCall id="call-icon" /></a>
             </div>
             
 
