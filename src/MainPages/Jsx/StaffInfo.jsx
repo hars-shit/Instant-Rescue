@@ -1,26 +1,55 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {MdAddCall} from 'react-icons/md'
 import '../Styles/Staff.css'
+import { data } from "../../FakeData/data";
+// import {data}  from "../../FakeData/data";
 const StaffInfo=()=>{
+   
+    const [isVisible,setIsVisible]=useState(false);
+    useEffect(()=>{
+       const interval = setInterval(()=>{
+        setIsVisible(true);
+        clearInterval(interval);
+        },7000)
+    return ()=>{
+        clearInterval(interval);
+    }
+    },[])
     return (<section className="staff-container">
         {/* for  the data of the mdecical staff  */}
         <div><p className="medical-heading">Available Medical workforce</p></div>
-        <div className="info-staff">
-            <div className="info-image">
+        { !isVisible && 
+            <div class="loader"></div>
+        }
+        {
+            isVisible &&
+      data.map((e,key)=>{
 
-            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.mEma0ZcipymPAHIYoIuFiAHaJa%26pid%3DApi&f=1&ipt=5264d993ea346dd08c643e823a2f698578ab9f651a72422b784970e4250c6b64&ipo=images" alt="" />
+     return(
+
+     
+          <div className="info-staff" key={key}>
+          <div className="info-image">
+           
+
+            <img src={e.image} alt="" />
             </div>
+            
             <div className="info-name">
 
-            <h5>Kartik Doctor</h5>
-            <p id="occupation">Masters in Allo ki Sabji</p>
+                <h5>{e.name}r</h5>
+            <p id="occupation">{e.occupation}</p>
             </div>
             <div className="info-call">
 
-            <a href="tel:9520593613"><MdAddCall id="call-icon"/></a>
+            <a href={`tel:${e.phone_no}`} ><MdAddCall id="call-icon" /></a>
             </div>
+            
 
         </div>
+        ) })
+
+          }
     </section>)
 }
 export default StaffInfo;

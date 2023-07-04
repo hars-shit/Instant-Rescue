@@ -4,6 +4,7 @@ import StaffInfo from "./StaffInfo";
 import Navbar from "./Navbar";
 import '../Styles/UserLocation.css'
 import SignUpAlert from "./SignUpAlert";
+import StreetLoc from "./StreetLoc";
 
 const UserLocation=()=>{
     
@@ -23,13 +24,13 @@ const UserLocation=()=>{
         })
 },[])
 
-  if(long && lat ){
+ 
 
  
     return(
       
         <div className="main-section">
-        
+        <StreetLoc long={long} lat={lat}/>
         <section>
           <Navbar />
         </section>
@@ -49,6 +50,6 @@ const UserLocation=()=>{
         </section>
             </div>
     )
-  }
+  
 }
 export default UserLocation;

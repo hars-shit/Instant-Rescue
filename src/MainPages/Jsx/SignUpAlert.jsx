@@ -5,9 +5,9 @@ import { Link } from "react-router-dom";
 const SignUpAlert=()=>{
     return (
 
-        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <div className="alert alert-warning alert-dismissible fade show" role="alert">
  <Link to={'/SignUp'}> <strong><FaUserMd id="signUp"/></strong> Enroll as a  medical professional in our esteemed healthcare mission</Link>
-  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  <button type="button" className="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>
         )
 }
