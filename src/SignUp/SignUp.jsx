@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import '../SignUp/SignUp.css'
+import {FaUserMd} from 'react-icons/fa';
 const SignUp=()=>{
   const [medicLong,setMedicLong]=useState();
   const [medicLet,setMedicLet]=useState();
@@ -21,11 +22,14 @@ const SignUp=()=>{
           {/* <img src="src/assets/th1.png" alt="" /> */}
  
   <form className="form-container">
-    
-    <h1 className="signUp-heading">Register Account</h1>
+    <div>
+
+    <h1 className="signUp-heading"><p id="heading">Register Account</p></h1>
+    <p className="minor-heading">Only for Healthcare Workers</p>
+    </div>
 
     <div className="form-floating">
-      <input type="text" className="form-control" id="floatingInput" placeholder="Dr. Kamlesh Bhatt" />
+      <input type="text" className="form-control" id="floatingInput"  placeholder="Dr. Kamlesh Bhatt" />
       <label >Name</label>
     </div>
     <div className="form-floating">

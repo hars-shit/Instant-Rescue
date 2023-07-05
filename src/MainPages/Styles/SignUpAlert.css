@@ -1,11 +1,13 @@
 #signUp{
     font-size: 25px;
     color: #6a6887;
+    font-weight: 700;
 }
 a{
     text-decoration: none;
     display: flex;
     gap: 20px;
+    font-weight: 700;
     color: #917676;
     align-items: center;
 }

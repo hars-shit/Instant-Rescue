@@ -9,3 +9,9 @@
     flex-direction: row;
     list-style: none;
 }
+ul{
+    gap: 15px;
+}
+.footer-link{
+    font-weight: 700;
+}

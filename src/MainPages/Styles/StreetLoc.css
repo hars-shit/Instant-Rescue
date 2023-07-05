@@ -8,13 +8,17 @@ p svg{
     font-size: 20px;
     margin-right: 10px;
     color: teal;
+    font-weight: 700;
 }
 #street{
     font-size: 22px;
+    font-weight: 700;
 }
 .addressBook{
     padding-left: 10px;
+    font-weight: 550;
 }
 .streetBook{
     padding-left: 8px;
+    font-weight: 550;
 }

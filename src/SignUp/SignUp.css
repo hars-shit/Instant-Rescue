@@ -28,6 +28,13 @@
 .signUp-heading{
     font-size: 30px;
     font-weight: 700;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.signUp-heading svg{
+    font-size: 20px;
+    color: #31287c;
 }
 .submit-btn{
     border-radius: 20px;
@@ -35,12 +42,14 @@
     background-color: #31287c;
   
 }
-.signUp-main{
-    position: relative;
+.minor-heading{
+color: gray;
+font-size: 15px;
+font-weight: 700;
+/* margin-left: 31px; */
 }
-img{
-    max-width: -webkit-fill-available;
-    opacity: 0.2;
-    position: absolute;
-    height: 99vh;
+#heading{
+    margin-bottom: 0px;
+    color: #5fe32a;
+    font-weight: 700;
 }
