@@ -29,7 +29,7 @@ const Navbar=()=>{
               <Link className="nav-link active" to="/APIs"><FaLocationArrow />APIs</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link active" to="/FAQs">FAQs</Link>
+              <Link className="nav-link active" to="/FAQs"><FaLocationArrow />FAQs</Link>
             </li>
            
           </ul>
