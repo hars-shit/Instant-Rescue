@@ -11,7 +11,7 @@ const StaffInfo=()=>{
        const interval = setInterval(()=>{
         setIsVisible(true);
         clearInterval(interval);
-        },8000)
+        },10000)
     return ()=>{
         clearInterval(interval);
     }

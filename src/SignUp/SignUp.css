@@ -1,4 +1,6 @@
-
+.signUp-container{
+    padding: 0px 0px;
+}
 .form-container{
     display: flex;
     flex-direction: column;
@@ -6,13 +8,14 @@
     gap: 35px;
     height: 96vh;
     width: 54vh;
-    padding: 80px 40px;
+    padding: 60px 40px;
 }
 #option-choice{
     color: rgb(226, 207, 207);
 }
 .form-floating{
     display: flex;
+    width: 40vh;
     /* justify-content: center; */
     align-items: center;
     gap: 40px;
@@ -21,9 +24,7 @@
     font-size: 25px;
     margin-bottom: 7px;
 }
-#bulb-filled{
-    color: orange;
-}
+
 .signUp-heading{
     font-size: 30px;
     font-weight: 700;
@@ -31,12 +32,15 @@
 .submit-btn{
     border-radius: 20px;
     font-weight: 700;
-    background-color: teal;
+    background-color: #31287c;
+  
 }
-.form-floating button{
-    width: 100px;
-    /* border: 1px solid #0d6efd; */
-    border-radius: 20px;
-    background-color: teal;
-    color: white;
+.signUp-main{
+    position: relative;
+}
+img{
+    max-width: -webkit-fill-available;
+    opacity: 0.2;
+    position: absolute;
+    height: 99vh;
 }
