@@ -22,3 +22,29 @@
     font-size: 30px;
   
 }
+.offcanvas-end {
+    max-width: 37vh;
+    background-color: #31224e;
+}
+.offcanvas-title{
+    color: #5fe32a;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    font-size: 25px;
+}
+.nav-link {
+    font-weight: 700;
+    margin-left: 20px;
+    display: flex;
+    
+    align-items: center;
+    gap: 10px;
+       
+}
+
+.offcanvas-body {
+    margin-top: 30px;
+}
