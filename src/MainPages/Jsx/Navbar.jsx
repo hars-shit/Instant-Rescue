@@ -7,7 +7,7 @@ import {BiMenuAltRight} from 'react-icons/bi'
 const Navbar=()=>{
     return <nav className="navbar navbar-dark  fixed-top">
     <div className="container-fluid">
-      <p className="navbar-brand heading">insta-Rescue</p>
+      <p className="navbar-brand heading">instant-Rescue</p>
       <button className="navbar-toggler btn-icon" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
       <BiMenuAltRight id="sidemenu-icon"/>
       </button>

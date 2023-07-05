@@ -1,13 +1,29 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import '../SignUp/SignUp.css'
+import {FaLightbulb} from 'react-icons/fa'
+import {TbBulbFilled} from 'react-icons/tb';
 const SignUp=()=>{
+  const [medicLong,setMedicLong]=useState();
+  const [medicLet,setMedicLet]=useState();
+ const handleMedicLocation=(()=>{
+    navigator.geolocation.getCurrentPosition((position)=>{
+      console.log(position.coords.latitude);
+      console.log(position.coords.longitude);
+      setMedicLong(position.coords.longitude);
+      setMedicLet(position.coords.latitude);
+
+    })
+  })
+  useEffect(()=>{
+    handleMedicLocation();
+  },[])
     return(
-        <div className="d-flex align-items-center py-4 bg-body-tertiary">
+        <div className="signUp-container">
   
-<main className="form-signin w-100 m-auto">
+<main className="signUp-main">
   <form className="form-container">
     
-    <h1 className="h3 mb-3 fw-normal">Please sign in</h1>
+    <h1 className="signUp-heading">Register Account</h1>
 
     <div className="form-floating">
       <input type="text" className="form-control" id="floatingInput" placeholder="Dr. Kamlesh Bhatt" />
@@ -30,9 +46,18 @@ const SignUp=()=>{
       <input type="file" className="form-control" id="floatingInput" placeholder="image"  />
       <label >image </label>
     </div>
+    <div className="form-floating">
+      <button onClick={handleMedicLocation}>Location</button>
+      {
+       ! medicLong && ! medicLet && <FaLightbulb />
+      }
+      {
+        medicLong &&  medicLet && <TbBulbFilled id="bulb-filled"/>
+      }
+    </div>
 
     
-    <button className="btn btn-primary w-100 py-2" type="submit">Sign in</button>
+    <button className="btn btn-primary w-100 py-2 submit-btn" type="submit">Sign in</button>
 
   </form>
 </main>

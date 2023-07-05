@@ -22,7 +22,6 @@ const UserLocation=()=>{
 //   for latitude =>
   const [lat,setLat]=useState();
 
-
     useEffect(()=>{
         navigator.geolocation.getCurrentPosition((position)=>{
             console.log(position.coords)

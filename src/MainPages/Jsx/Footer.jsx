@@ -16,7 +16,7 @@ const Footer=()=>{
       <li className="nav-item"><Link to="/FAQs" className="nav-link px-2 text-body-secondary">FAQs</Link></li>
       <li className="nav-item"><Link to="https://github.com/hars-shit/Instant-Rescue" className="nav-link px-2 text-body-secondary">About</Link></li>
     </ul>
-    <p className="text-center text-body-secondary">© 2023 insta-rescue, Inc</p>
+    <p className="text-center text-body-secondary">© 2023 instant-rescue, Inc</p>
   </footer>
   </>
 
