@@ -14,7 +14,7 @@ const Navbar=()=>{
       </button>
       <div className="offcanvas offcanvas-end "  id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
         <div className="offcanvas-header">
-          <h5 className="offcanvas-title" id="offcanvasDarkNavbarLabel"><FaStreetView />instant-rescue</h5>
+          <p className="navbar-brand heading" id="offcanvasDarkNavbarLabel"><FaStreetView />instant-rescue</p>
           <button type="button" className="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div className="offcanvas-body ">

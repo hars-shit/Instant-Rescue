@@ -32,6 +32,7 @@ const userSlice = createSlice({
       state.location2 = action.payload;
       // console.log('redux:', action.payload);
     },
+    
   },
 });
 

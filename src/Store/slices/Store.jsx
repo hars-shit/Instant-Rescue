@@ -1,12 +1,3 @@
-// import { configureStore } from "@reduxjs/toolkit";
-// import UserSlice from "./UserSlice";
-
-import persistReducer from "redux-persist/es/persistReducer";
-import UserSlice from "./UserSlice";
-import persistStore from "redux-persist/es/persistStore";
-import { configureStore } from "@reduxjs/toolkit";
-
-
 
 // // this store is gathering the data from minor slices 
 // const store=configureStore({
@@ -16,26 +7,28 @@ import { configureStore } from "@reduxjs/toolkit";
 // })
 // export default store;
 
-
-//changed code
-// import { configureStore } from "@reduxjs/toolkit";
-
+import persistReducer from "redux-persist/es/persistReducer";
+import UserSlice from "./UserSlice";
+import persistStore from "redux-persist/es/persistStore";
+import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import storage from "redux-persist/lib/storage";
-// import UserSlice from "./UserSlice";
-// import persistReducer from "redux-persist/es/persistReducer";
-// import persistStore from "redux-persist/es/persistStore";
+import FormData from "./FormData";
+// import FormData from "./FormData";
+
 
 const persistConfig = {
   key: "root",
  storage
 };
 
-const persistedReducer = persistReducer(persistConfig, UserSlice);
+const reducer=combineReducers({
+  users:UserSlice,
+  formData:FormData,
+})
+const persistedReducer = persistReducer(persistConfig, reducer);
 
 const store = configureStore({
-  reducer: {
-    users: persistedReducer,
-  },
+ reducer:persistedReducer,
 });
 
 const persistor = persistStore(store);

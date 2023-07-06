@@ -1,21 +1,29 @@
-import React, { useEffect, useState } from "react";
+import React, {useState } from "react";
 import '../SignUp/SignUp.css'
-import {FaUserMd} from 'react-icons/fa';
+import { useDispatch } from "react-redux";
+import FormData, { saveFormData } from "../Store/slices/FormData";
 const SignUp=()=>{
-  const [medicLong,setMedicLong]=useState();
-  const [medicLet,setMedicLet]=useState();
- const handleMedicLocation=(()=>{
-    navigator.geolocation.getCurrentPosition((position)=>{
-      console.log(position.coords.latitude);
-      console.log(position.coords.longitude);
-      setMedicLong(position.coords.longitude);
-      setMedicLet(position.coords.latitude);
+ 
+ 
+ const [data,setData]=useState({
+    name:"",
+    pNo:"",
 
-    })
   })
-  useEffect(()=>{
-    handleMedicLocation();
-  },[])
+  const dispatch=useDispatch();
+  const handleChange=(e)=>{
+   const name=e.target.name;
+   const value=e.target.value;
+   setData({...data,[name]:value})
+  }
+  const handleSubmit=(e)=>{
+   e.preventDefault();
+   dispatch(saveFormData(data));
+   console.log(data)
+  //  saveFormData(data)
+  console.log('hello')
+  }
+
     return(
         <div className="signUp-container">
 <main className="signUp-main">
@@ -29,11 +37,11 @@ const SignUp=()=>{
     </div>
 
     <div className="form-floating">
-      <input type="text" className="form-control" id="floatingInput"  placeholder="Dr. Kamlesh Bhatt" />
+      <input type="text" className="form-control" id="floatingInput" value={data.name} name="name" onChange={handleChange}  placeholder="Dr. Kamlesh Bhatt" />
       <label >Name</label>
     </div>
     <div className="form-floating">
-      <input type="number" className="form-control" id="floatingInput" placeholder="phone number"  />
+      <input type="number" className="form-control" value={data.pNo} name="pNo" id="floatingInput" onChange={handleChange}  placeholder="phone number"  />
       <label >phone number</label>
     </div>
     <div className="form-floating">
@@ -46,14 +54,14 @@ const SignUp=()=>{
       <label >occupation</label>
     </div>
     <div className="form-floating">
-      <input type="file" className="form-control" id="floatingInput" placeholder="image"  />
+      <input type="file" className="form-control"  id="floatingInput" placeholder="image"  />
       <label >image </label>
     </div>
    
 
     <div className="form-floating">
 
-    <button className="btn btn-primary w-100 py-2 submit-btn" type="submit">Sign in</button>
+    <button className="btn btn-primary w-100 py-2 submit-btn"  onClick={handleSubmit}>Sign in</button>
     </div>
 
   </form>
