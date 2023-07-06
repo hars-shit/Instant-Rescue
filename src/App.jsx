@@ -3,8 +3,9 @@ import UserLocation from "./MainPages/Jsx/UserLocation"
 import { BrowserRouter, Route, Router, Routes } from "react-router-dom"
 import SignUp from "./SignUp/SignUp"
 import Features from "./FooterAssets/Features"
-import APIs from "./FooterAssets/APIs"
-import FAQs from "./FooterAssets/FAQs"
+import APIs from "./FooterAssets/APIs/APIs"
+import FAQs from "./FooterAssets/FAQs/FAQs"
+
 
 
 

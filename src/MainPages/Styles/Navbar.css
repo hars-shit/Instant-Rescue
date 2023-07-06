@@ -1,6 +1,21 @@
  .heading{
     font-weight: 700;
     font-size: 30px;
+    color: #5fe32a;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+    top: 7px;
+}
+.heading:hover{
+    color: #5fe32a;
+}
+.heading svg{
+    color: #5fe32a;
+    font-size: 30px;
 } 
 .navbar{
     padding: 0px 15px;

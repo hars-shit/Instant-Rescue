@@ -1,7 +1,7 @@
 .main-api{
     display: flex;
     height: 80vh;
-    margin-top: 6.5rem;
+    margin-top: 5rem;
     gap: 10px;
     flex-direction: column;
     /* border: 2px solid; */

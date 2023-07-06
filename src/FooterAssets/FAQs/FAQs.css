@@ -1,0 +1,21 @@
+.main-faq{
+    display: flex;
+    height: 80vh;
+    margin-top: 5rem;
+    gap: 10px;
+    flex-direction: column;
+    /* border: 2px solid; */
+    padding: 10px 10px;
+    margin-left: 13px;
+    
+}
+.faq-heading{
+    font-size: 30px;
+    font-weight: 700;
+    color:#5fe32a;
+}
+.faq{
+
+    gap: 15px;
+    margin-top: 1rem;
+    }

@@ -23,7 +23,7 @@
     padding: 10px 10px;
     gap: 27px;
     align-items: baseline;
-    border: 3px solid rgb(249 249 249);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     border-radius: 10px;
 }
 .info-staff img{

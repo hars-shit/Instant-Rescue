@@ -8,13 +8,13 @@ import {FaStreetView,FaLocationArrow} from 'react-icons/fa'
 const Navbar=()=>{
     return <nav className="navbar navbar-dark  fixed-top">
     <div className="container-fluid">
-      <p className="navbar-brand heading">instant-Rescue</p>
+      <p className="navbar-brand heading"><FaStreetView />instant-rescue</p>
       <button className="navbar-toggler btn-icon" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
       <BiMenuAltRight id="sidemenu-icon"/>
       </button>
       <div className="offcanvas offcanvas-end "  id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
         <div className="offcanvas-header">
-          <h5 className="offcanvas-title" id="offcanvasDarkNavbarLabel"><FaStreetView />Location</h5>
+          <h5 className="offcanvas-title" id="offcanvasDarkNavbarLabel"><FaStreetView />instant-rescue</h5>
           <button type="button" className="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div className="offcanvas-body ">
