@@ -26,11 +26,12 @@ margin-top: 1rem;
     width: 169px;
     padding: 5px 5px;
     display: flex;
-    background-color: #634a95;
+    background-color: #31287c;
     height: 75px;
 }
 .api-card a{
     color: white;
+    font-weight: 100;
 }
 .api-card a svg{
     font-size: 20px;
