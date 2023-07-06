@@ -15,28 +15,23 @@
     color:#5fe32a;
 }
 .cards{
-display: grid;
-grid-template-columns: auto auto;
+
 gap: 15px;
 margin-top: 1rem;
 }
 .api-card {
-    border: 1px solid blue;
+   
     border-radius: 10px;
-    width: 169px;
+
     padding: 5px 5px;
     display: flex;
-    background-color: #31287c;
-    height: 75px;
+  
+   
 }
 .api-card a{
-    color: white;
+    font-size: 20px;
     font-weight: 100;
 }
 .api-card a svg{
     font-size: 20px;
-}
-
-#geo-arrow{
-    font-size: 30px;
 }
