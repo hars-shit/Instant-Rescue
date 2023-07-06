@@ -9,7 +9,7 @@ const Footer=()=>{
        
         <div className="b-example-divider"></div>
   <footer className="py-3 my-4">
-    <ul className="nav justify-content-center border-bottom pb-3 mb-3">
+    <ul className="nav justify-content-center border-bottom pb-3 mb-3" style={{paddingRight:'23px'}}>
       {/* <li className="nav-item"><Link to="/" className="nav-link px-2 text-body-secondary">Home</Link></li> */}
       <li className="nav-item"><Link to="/SignUp" className="nav-link px-2 text-body-secondary footer-link">SignUp </Link></li>
       <li className="nav-item"><Link to="/APIs" className="nav-link px-2 text-body-secondary footer-link">APIs</Link></li>
