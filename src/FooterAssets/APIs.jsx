@@ -11,9 +11,9 @@ const APIs=()=>{
     <div className="main-api">
         <div className="api-heading">APIs Utilized</div>
         <div className="cards">
-        <div className="api-card"><Link>tom tom map api<FiArrowUpRight /></Link></div>
-        <div className="api-card geo-card"><Link >geoapify reverse geocoding <FiArrowUpRight /></Link></div>
-        <div className="api-card"><Link to={"https://www.npmjs.com/package/react-geolocated"}>react-geolocated<FiArrowUpRight /></Link></div>
+        <div className="api-card"><Link>Tom-Tom Map API<FiArrowUpRight /></Link></div>
+        <div className="api-card geo-card"><Link >Geoapify Reverse Geocoding API<FiArrowUpRight id="geo-arrow"/></Link></div>
+        <div className="api-card"><Link to={"https://www.npmjs.com/package/react-geolocated"}>React-Geolocated<FiArrowUpRight /></Link></div>
         </div>
     </div>
     </>
