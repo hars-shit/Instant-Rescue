@@ -52,3 +52,12 @@ font-weight: 700;
     color: #5fe32a;
     font-weight: 700;
 }
+.form-control{
+    position: relative;
+}
+
+.wrong-icon{
+    position: absolute;
+    left: 18rem;
+    color: #5fe32a;
+}
