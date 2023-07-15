@@ -46,6 +46,7 @@ const StaffInfo=()=>{
      return(
 
      <>
+     {/* This is to be change  */}
      {
      console.log("userLocation:",Math.trunc(locations.location1 * 10),Math.trunc(locations.location2 *10))
      
