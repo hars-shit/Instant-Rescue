@@ -1,20 +1,28 @@
 import React, {useState } from "react";
 import '../SignUp/SignUp.css'
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { saveFormData } from "../Store/slices/FormData";
 import {GoAlertFill} from 'react-icons/go'
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 const SignUp=()=>{
- 
   // const [correctPhNo,setCorrectPhNo]=useState(true);
   // const [correctOcc,setCorrectOcc]=useState(true);
   // const [image,setImage]=useState();
+  const user = useSelector((user)=>user.users)
+  const navigate = useNavigate()
+  const[err, setErr] = useState(false)
  const [data,setData]=useState({
     name:"",
-    pNo:"",
+    phNo:"",
     occupation:"",
-    image:"",
+    location:{
+      long:`${user.location1}`,
+      lat:`${user.location2}`
+  }
   })
   const dispatch=useDispatch();
+
   const handleChange=(e)=>{
    const name=e.target.name;
    const value=e.target.value;
@@ -25,18 +33,26 @@ const SignUp=()=>{
   
   
   
-  const handleSubmit=(e)=>{
+  const handleSubmit= async (e)=>{
    e.preventDefault();
     if(data.occupation==0 ){
       setCorrectOcc(!correctOcc); 
     }
+    // else{
+    //   dispatch(saveFormData(data));
+    //   console.log(data)
+    // }
+    console.log(data)
 
-    else{
-      dispatch(saveFormData(data));
-      console.log(data)
+    try{
+      const response = await axios.post(`https://nice-lime-fly-fez.cyclic.app/api/v1/auth/register`,data)
+      console.log(response)
+      navigate('/')
+    }catch(err){
+      console.log(err)
+      setErr(true)
     }
     
- 
   }
 
     return(
@@ -56,7 +72,7 @@ const SignUp=()=>{
       <label >Name</label>
     </div>
     <div className="form-floating">
-      <input type="number" className="form-control" value={data.pNo} name="pNo" id="floatingInput" onChange={handleChange} placeholder={"phone number"} />
+      <input type="number" className="form-control" value={data.phNo} name="phNo" id="floatingInput" onChange={handleChange} placeholder={"phone number"} />
      
       <label >phone number</label>
 
@@ -72,17 +88,14 @@ const SignUp=()=>{
       </select>
       <label >occupation</label>
     </div>
-    <div className="form-floating">
-      <input type="file" accept="Image"  name="image" value={data.image}  className="form-control"  id="floatingInput" placeholder="image"  onChange={handleChange}/>
-      <label >image </label>
-    </div>
+   
    
 
     <div className="form-floating">
 
     <button className="btn btn-primary w-100 py-2 submit-btn"  onClick={handleSubmit}>Sign in</button>
     </div>
-
+    {err && <p style={{color:"tomato"}}>something went wrong please try again</p>}
   </form>
 </main>
 
