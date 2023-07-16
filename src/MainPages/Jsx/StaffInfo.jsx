@@ -1,20 +1,22 @@
 import React, { useEffect, useState } from "react";
 import {MdAddCall} from 'react-icons/md'
 import '../Styles/Staff.css'
-import image  from '/home/harshit/Desktop/React/Insta rescue/src/assets/medical-team.png'
+
 import {FcSearch} from 'react-icons/fc'
 import axios from "axios";
 import { useSelector } from "react-redux";
 // import {data}  from "../../FakeData/data";
 const StaffInfo=()=>{
-    const locations = useSelector((state)=>state.users)
+
+    const user = useSelector((user)=>user.users)
+
     const [isVisible,setIsVisible]=useState(false);
     const [staff, setStaff] = useState([])
     useEffect(()=>{
        const interval = setInterval(()=>{
         setIsVisible(true);
         clearInterval(interval);
-        },2000)
+        },10000)
     return ()=>{
         clearInterval(interval);
     }
@@ -41,24 +43,22 @@ const StaffInfo=()=>{
         }
         {
             isVisible &&
-      staff.map((e,key)=>{
+      staff.filter((l)=>{
+        const newlong = parseFloat(l?.location?.long);
+        const newlat = parseFloat(l?.location?.lat);
+        return(
+        newlong.toFixed(1) === user.location1.toFixed(1)&&
+        newlat.toFixed(1) === user.location2.toFixed(1)
+      )}).map((e,key)=>{
 
      return(
 
-     <>
-     {/* This is to be change  */}
-     {
-     console.log("userLocation:",Math.trunc(locations.location1 * 10),Math.trunc(locations.location2 *10))
      
-     }
-     {
-        console.log("medicalStaff location:",Math.trunc(e.location.long*10),Math.trunc(e.location.lat*10))
-     }
           <div className="info-staff" key={key}>
           <div className="info-image">
            
 
-            <img src={image} alt="" />
+            <img src={e?.image} alt="" />
             </div>
             
             <div className="info-name">
@@ -73,7 +73,6 @@ const StaffInfo=()=>{
             
 
         </div>
-     </>
         ) })
 
           }
