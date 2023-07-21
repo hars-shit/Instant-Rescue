@@ -45,7 +45,7 @@ const SignUp=()=>{
     console.log(data)
 
     try{
-      const response = await axios.post(`https://nice-lime-fly-fez.cyclic.app/api/v1/auth/register`,data)
+      const response = await axios.post(`https://plum-tricky-prawn.cyclic.app/api/v1/auth/register`,data)
       console.log(response)
       navigate('/')
     }catch(err){

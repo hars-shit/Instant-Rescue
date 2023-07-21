@@ -3,8 +3,12 @@
     /* width: 100vh; */
     height: 400px;
 }
+
 @media screen and(max-width:400px) {
     .map-container{
         height: 40px;
     }
+}
+.mapboxgl-ctrl-bottom-right{
+    display: none;
 }

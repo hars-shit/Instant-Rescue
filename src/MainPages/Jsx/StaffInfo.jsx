@@ -15,7 +15,7 @@ const StaffInfo = () => {
         const interval = setInterval(() => {
             setIsVisible(true);
             clearInterval(interval);
-        }, 10000)
+        }, 8000)
         return () => {
             clearInterval(interval);
         }
@@ -24,7 +24,7 @@ const StaffInfo = () => {
     useEffect(() => {
         const loadstaff = async () => {
             try {
-                const res = await axios.get(`https://nice-lime-fly-fez.cyclic.app/api/v1/auth/get`)
+                const res = await axios.get(`https://plum-tricky-prawn.cyclic.app/api/v1/auth/get`)
                 // console.log(res.data)
                 setStaff(res.data)
             } catch (err) {
@@ -50,9 +50,9 @@ const StaffInfo = () => {
             <div className="loader"></div>
         }
 
-        {isVisible && filteredStaff.length === 0 && (
+        {/* {isVisible && filteredStaff.length === 0 && (
             <span>No doctor found</span>
-        )}
+        )} */}
 
         {
             isVisible && filteredStaff.length > 0 &&(
